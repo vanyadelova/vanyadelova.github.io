@@ -42,3 +42,26 @@ $('#navigation a').on('click', function(e) {
       $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
     });
   });
+
+  scrollTo = (element) => {
+    window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: element.offsetTop - 50
+    });
+}
+document.getElementById("arrow").addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollTo(document.getElementById("work"));
+});
+document.getElementById("work-link").addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollTo(document.getElementById("work"));
+});
+document.getElementById("latest-link").addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollTo(document.getElementById("latest"));
+});
+document.getElementById("up").addEventListener('click', () => {
+    scrollTo(document.getElementById("top"));
+});

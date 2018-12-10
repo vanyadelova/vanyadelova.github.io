@@ -5,6 +5,8 @@ body{
     position: relative;
   }
 
+  .arrow{display:none;font-size:2rem}
+
   .left {
     float:right;
   }
